@@ -35,13 +35,14 @@
             txtRadius = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            btnOutputParameter = new Button();
             btnRefParameter = new Button();
             txtInput = new TextBox();
             txtSize = new TextBox();
             txtLetter = new TextBox();
             btnTriangle01 = new Button();
             txtOutput = new TextBox();
-            btnOutputParameter = new Button();
+            btnArrayParamiter = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -114,6 +115,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.ControlDark;
+            groupBox2.Controls.Add(btnArrayParamiter);
             groupBox2.Controls.Add(btnOutputParameter);
             groupBox2.Controls.Add(btnRefParameter);
             groupBox2.Controls.Add(txtInput);
@@ -127,6 +129,16 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "ทดสอบ funtion";
+            // 
+            // btnOutputParameter
+            // 
+            btnOutputParameter.Location = new Point(239, 238);
+            btnOutputParameter.Name = "btnOutputParameter";
+            btnOutputParameter.Size = new Size(237, 29);
+            btnOutputParameter.TabIndex = 6;
+            btnOutputParameter.Text = "ทดสอบ output Parameter";
+            btnOutputParameter.UseVisualStyleBackColor = true;
+            btnOutputParameter.Click += btnOutputParameter_Click;
             // 
             // btnRefParameter
             // 
@@ -181,15 +193,15 @@
             txtOutput.Size = new Size(212, 293);
             txtOutput.TabIndex = 0;
             // 
-            // btnOutputParameter
+            // btnArrayParamiter
             // 
-            btnOutputParameter.Location = new Point(239, 238);
-            btnOutputParameter.Name = "btnOutputParameter";
-            btnOutputParameter.Size = new Size(237, 29);
-            btnOutputParameter.TabIndex = 6;
-            btnOutputParameter.Text = "ทดสอบ output Parameter";
-            btnOutputParameter.UseVisualStyleBackColor = true;
-            btnOutputParameter.Click += btnOutputParameter_Click;
+            btnArrayParamiter.Location = new Point(239, 273);
+            btnArrayParamiter.Name = "btnArrayParamiter";
+            btnArrayParamiter.Size = new Size(237, 29);
+            btnArrayParamiter.TabIndex = 7;
+            btnArrayParamiter.Text = "Paramiter แบบ Array";
+            btnArrayParamiter.UseVisualStyleBackColor = true;
+            btnArrayParamiter.Click += btnArrayParamiter_Click;
             // 
             // Form1
             // 
@@ -224,5 +236,6 @@
         private Button btnRefParameter;
         private TextBox txtInput;
         private Button btnOutputParameter;
+        private Button btnArrayParamiter;
     }
 }

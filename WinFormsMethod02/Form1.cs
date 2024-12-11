@@ -144,7 +144,7 @@ namespace WinFormsMethod02
         private void btnOutputParameter_Click(object sender, EventArgs e)
         {
             string Fname = "";
-            if (improveName3(txtInput.Text,out Fname))
+            if (improveName3(txtInput.Text, out Fname))
             {
                 txtInput.Text = Fname;
             }
@@ -152,6 +152,26 @@ namespace WinFormsMethod02
             {
                 MessageBox.Show("Error Data!!!", "Error.");
             }
+        }
+
+        private void btnArrayParamiter_Click(object sender, EventArgs e)
+        {
+            double[] data = new double[] { 1.5, 2.0, 3.25, 0.15};
+            double summary = sum(data);
+            string result = string.Join("/",data);
+            result += Environment.NewLine;
+            result += summary.ToString();
+            MessageBox.Show(result, "The sum in array.");
+        }
+
+        double sum(double[] dataArray)
+        {
+            double sum = 0;
+            foreach (double d in dataArray)
+            {
+                sum += d;
+            }
+            return sum;
         }
     }
 }
